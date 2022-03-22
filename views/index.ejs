@@ -1,0 +1,50 @@
+<html>
+
+<head>
+    <title> ToDo App </title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet">
+    <link rel="stylesheet" href="https://upsleek-ui.vercel.app/css/style.css">
+    <link href="/styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navigation ">
+        <div class="nav-brand">toDoApp</div>
+    </nav>
+
+    <div class="container">
+        <h1 class="txt-center mt-xl mb-lg"> To Do App</h1>
+
+        <form action="/addtask" method="POST">
+                <input class="form-control" type="text" name="newtask" placeholder="add new task">
+                <button class="btn btn-primary"> Add </button>
+            
+            <h2 class="mt-lg"> Your tasks </h2>
+            <ul class="list-style-none">
+            <% for( var i=0; i < task.length; i++){ %>
+                <li class="mt-md mb-md"><label class="checkbox-container"> <%= task[i] %>
+                    <input type="checkbox" class="form-control"name="check" value="<%= task[i] %>" />
+                    <span class="checkbox-custom"></span>
+                </label>
+                    
+                </li>
+                <% } %>
+            </ul>
+                    <button class="btn btn-primary btn-sec" formaction="/removetask" type="submit" id="top"> Mark Done </button>
+        </form>
+
+        <h2 class="mt-lg"> Completed tasks </h2>
+        <ul class="list-style-none">
+        <% for(var i=0; i < complete.length; i++){ %>
+            <li class="mt-md mb-md"><label class="checkbox-container"> <%= complete[i] %>
+                <input type="checkbox" class="form-control" checked disabled />
+                <span class="checkbox-custom"></span>
+            </label>
+                
+            </li>
+            <% } %>
+        </ul>
+    </div>
+</body>
+
+</html>
