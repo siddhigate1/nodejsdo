@@ -1,0 +1,59 @@
+:root{
+    --primary-color: #6d28d9;
+}
+.container {
+  display: block;
+  width: 400px;
+  margin: 0 auto;
+}
+
+.form-control[type="text"] {
+    display: inline;
+    border: 1px solid lightgray;
+    width: 70%;
+    margin-right: 1rem;
+}
+
+.btn {
+    padding: 0.5rem 1rem;
+}
+
+.btn-sec {
+    font-size: 0.9rem;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.navigation {
+    
+    padding: 1rem;
+    border-bottom-left-radius: 1rem;
+    margin: auto;
+    box-shadow: 0 1px 18px rgba(146,161,176,.15);
+    background: var(--primary-color);
+    background: var(--primary-color);
+    color: white;
+    padding:0.25rem 2rem 0.25rem 2rem;
+    max-width: 1100px;
+    margin: auto;
+    padding: 1.5rem;
+    margin-bottom: 4rem;
+}
+
+.navigation .nav-brand {
+    font-weight: bold;
+}
+
+
+button {
+  background-color: #03a9f4;
+  color: white;
+}
+
+button:hover {
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
